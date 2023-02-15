@@ -16,8 +16,17 @@
         </style>
     </head>
     <body class="antialiased">
-        <h2>Pagina inicial</h2>
-        <a href="/contato">Contato</a>
-        <a href="login">Login</a>
+        <h1>alguma coisa</h1>
+        <p>{{ $nome }}</p>
+        @if($nome == "Matheus")
+            <p>O nome é {{$nome}} e tem {{$idade}} anos, nascido em {{abs($idade - 2023)}}</p>
+            <!-- abs() transforma negativo em positivo -->
+
+        @else
+            <p>não é matheus</p>
+        @endif
+        <!-- learn conditionals -->
+
+
     </body>
 </html>
