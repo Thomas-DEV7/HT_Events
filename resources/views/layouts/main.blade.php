@@ -13,22 +13,30 @@
                 padding: 0;
                 font-family: sans-serif;
             }
-            h2{
-                background-color: steelblue;
-                padding: 10px;
-                border-radius: 10px;
+            div#flex{
+                display: flex;
+            }
+            footer{
+                text-align: center;
+                background-color: #353533;
+                color: #fff;
+                padding: 50px;
+                
             }
         </style>
     </head>
     <body>
         <!-- componentizando o header -->
-        @yield('content')
+        
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
+                    <div id="flex" class="">
                     <a href="/" class="navbar-brand">
-                        <img height="50" width="50" src="../../img/logoTh.png" alt="">
+                        <img height="70" width="90" src="https://cdn.freebiesupply.com/logos/large/2x/random-logo-png-transparent.png" alt="">
                     </a>
+                    </div>
+                    <div id="flex">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                         <a href="" class="nav-link">Eventos</a>
@@ -49,14 +57,13 @@
                         <a href="" class="nav-link">cadastrar </a>
                         </li>
                     </ul>
+                    </div>
+                    
                 </div>
             </nav>
         </header>
-
-        <!-- @yield('footer')
-        <footer>
-            <p>Thomas &copy; 2023</p>
-        </footer> -->
+        @yield('content')
+        <footer>Ht Eventos &copy; 2023 | Contrate (11)98899-0121</footer>
     </body>
 </html>
 
