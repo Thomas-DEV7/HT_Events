@@ -119,7 +119,7 @@
         <div id="cards-container" class="row">
             @foreach($events as $e)
             <div class="card col-md-3">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Ydz43t5ZVhk6WnzJmywG8Vj91LkABAA-PA&usqp=CAU" height="150" alt="{{$e->title}}">
+                <img src="{{$e->image}}" height="150" alt="{{$e->title}}">
                 <div class="card-body">
                     
                     <div class="card-title">
@@ -138,7 +138,7 @@
                         @endif
                         </b>
                     </div>
-                    <a href="#" class="btn btn-primary">Saber mais</a>
+                    <a href="/events/{{$e->id}}" class="btn btn-primary">Saber mais</a>
                 </div>
             </div>
             @endforeach
