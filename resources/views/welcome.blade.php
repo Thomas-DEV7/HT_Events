@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela inicial</title>
-    <link rel="stylesheet" href="../../public/css/style.css">
-    <link rel="shortcut icon" href="https://cdn.freebiesupply.com/logos/large/2x/random-logo-png-transparent.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="/public/css/style.css"> -->
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/92/Random_Encounters_%22RE%22_logo.png" type="image/x-icon">
 </head>
 <style>
     *{
@@ -48,12 +48,13 @@
         color: #C28008;
     }
     #search-container{
-        background-image: url('https://www.significadofacil.com/wp-content/uploads/2019/07/background-1200x800.jpg');
+        background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p3/1849553-fundo-ouro-moderno-gratis-vetor.jpg');
         background-size: cover;
         background-position: center;
         height: 400px;
         padding: 50px;
         text-align: center;
+        margin-top: 30px;
     }
     #search-container h1{
         color: #f2a340;
@@ -88,7 +89,7 @@
     }
     .card .card-dsc{
         font-size: 12px;
-        color: #C28008
+        color: #C28008;
     }
     .card .card-title{
         color: #212121;
@@ -126,12 +127,14 @@
                         {{$e->description}}
                     </div>
                     <div class="card-participants">
-                        {{$e->parts}} participantes
+                        {{$e->parts}} participantes<br>
+                        <b>
                         @if($e->private == 0)
                         Aberto ao público
                         @else
                         Evento Privado
                         @endif
+                        </b>
                     </div>
                     <a href="#" class="btn btn-primary">Saber mais</a>
                 </div>

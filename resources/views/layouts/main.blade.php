@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/92/Random_Encounters_%22RE%22_logo.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
         <title>@yield('title') Layout</title>
@@ -27,24 +28,24 @@
     </head>
     <body>
         <!-- componentizando o header -->
-        
+        <!-- https://upload.wikimedia.org/wikipedia/commons/9/92/Random_Encounters_%22RE%22_logo.png-->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <div id="flex" class="">
                     <a href="/" class="navbar-brand">
-                        <img height="70" width="90" src="https://cdn.freebiesupply.com/logos/large/2x/random-logo-png-transparent.png" alt="">
+                        <img height="70" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Random_Encounters_%22RE%22_logo.png" alt="">
                     </a>
                     </div>
                     <div id="flex">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a href="" class="nav-link">Eventos</a>
+                        <a href="/#cards-container" class="nav-link">Eventos</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a href="" class="nav-link"> Criar eventos</a>
+                        <a href="/events/create" class="nav-link"> Criar eventos</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
