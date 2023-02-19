@@ -24,6 +24,14 @@
                 padding: 50px;
                 
             }
+            .msg{
+                background-color: green;
+                color: #fff;
+                margin-bottom: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+            }
         </style>
     </head>
     <body>
@@ -62,6 +70,15 @@
                     
                 </div>
             </nav>
+            <main>
+                <div class="container-fluid">
+                <div class="row">
+                @if(session('msg'))
+                    <p class="msg">{{ session('msg')}}</p>
+                @endif
+                </div>
+                </div>
+            </main>
         </header>
         @yield('content')
         <footer>Ht Eventos &copy; 2023 | Contrate (11)98899-0121</footer>

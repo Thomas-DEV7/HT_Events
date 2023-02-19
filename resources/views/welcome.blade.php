@@ -67,6 +67,7 @@
     }
     #events-container{
         padding: 50px;
+        
     }
     #events-container h2{
         margin-bottom: 10px;
@@ -77,11 +78,12 @@
     }
     .cards-container{
         display: flex;
+        flex-direction: row;
     }
     #events-container .card{
-        flex: 1 1 0;
+        flex: 1 1 24%;
         max-width: 25%;
-        margin: 10px;
+        margin: .5%;
     }
     #event-container .card img{
         max-height: 150px;

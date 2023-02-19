@@ -14,6 +14,7 @@ class EventController extends Controller
     }
     public function create(){
         return view('events.create');
+
     }
     public function store(Request $request){
         $event = new Event;
@@ -22,8 +23,17 @@ class EventController extends Controller
         $event->city = $request ->city;
         $event->private = $request ->private;
         $event->parts = $request->parts;
+        // img upload
+        if($request ->hasFile('image') && $request ->file('image')->isValid()){
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName().strtotime("now"));
+            $request->image->move(public_path("events"), $imageName);
+            $event->image = $imageName;
+        }
+        $event->image = $request ->hasFile('image');
         $event->save();
-        return redirect('/');
+        return redirect('/')->with('msg', "Evento criado com sucesso!");
 
     }
 }

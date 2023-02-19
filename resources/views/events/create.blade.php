@@ -35,8 +35,12 @@
 <hr>
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1 class="title">Crie seu evento</h1>
-    <form action="/events" method="GET">
+    <form action="/events" method="GET" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label for="title">Escolha uma imagem:</label>
+            <input type="file" id="image" name="image" class="form-control-file">
+        </div>
         <div class="form-group">
             <label for="title">Nome do evento:</label>
             <input type="text" id="name" name="name" class="form-control">
